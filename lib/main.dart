@@ -23,46 +23,45 @@ class _MyAppState extends State<MyApp> {
         {"text": "Violet", "score": 5},
         {"text": "White", "score": 0},
       ],
-     },
-     {
-        "questionText": "What's your choice for an IDE?",
-        "answers": [
-          {"text": "Jetbrains IDE", "score": 15},
-          {"text": "Vscode", "score": 20},
-          {"text": "Atom", "score": 5},
-        ],
-      },
-      {
-        "questionText": "According to you which has the best camera?",
-        "answers": [
-          {"text": "Oneplus", "score": 10},
-          {"text": "Xiaomi", "score": 5},
-          {"text": "Pixel", "score": 20},
-          {"text": "Apple", "score": 15},
-          {"text": "Samsung", "score": 10}
-        ],
-      },
-      {
-        "questionText": "What's your favorite Hobby?",
-        "answers": [
-          {"text": "Photography", "score": 10},
-          {"text": "Editing", "score": 5},
-          {"text": "Studying", "score": 5},
-          {"text": "Sleeping", "score": 20},
-          {"text": "Coding", "score": 15},
-        ],
-      },
-      {
-        "questionText": "What's your favorite Movie Franchise?",
-        "answers": [
-          {"text": "John Wick", "score": 15},
-          {"text": "Hunger Games", "score": 10},
-          {"text": "Sherlock Holmes", "score": 10},
-          {"text": "1920", "score": 0},
-          {"text": "Marvel", "score": 20},
-        ],
-      },
-    
+    },
+    {
+      "questionText": "What's your choice for an IDE?",
+      "answers": [
+        {"text": "Jetbrains IDE", "score": 15},
+        {"text": "Vscode", "score": 20},
+        {"text": "Atom  ", "score": 5},
+      ],
+    },
+    {
+      "questionText": "According to you which has the best camera?",
+      "answers": [
+        {"text": "Oneplus", "score": 10},
+        {"text": "Xiaomi", "score": 5},
+        {"text": "Pixel", "score": 20},
+        {"text": "Apple", "score": 15},
+        {"text": "Samsung", "score": 10}
+      ],
+    },
+    {
+      "questionText": "What's your favorite Hobby?",
+      "answers": [
+        {"text": "Photography", "score": 10},
+        {"text": "Editing", "score": 5},
+        {"text": "Studying", "score": 5},
+        {"text": "Sleeping", "score": 20},
+        {"text": "Coding", "score": 15},
+      ],
+    },
+    {
+      "questionText": "What's your favorite Movie Franchise?",
+      "answers": [
+        {"text": "John Wick", "score": 15},
+        {"text": "Hunger Games", "score": 10},
+        {"text": "Sherlock Holmes", "score": 10},
+        {"text": "1920", "score": 0},
+        {"text": "Marvel", "score": 20},
+      ],
+    },
   ];
   var questionIndex = 0;
   var totalScore = 0;
@@ -72,7 +71,6 @@ class _MyAppState extends State<MyApp> {
       questionIndex = 0;
       totalScore = 0;
     });
-  
   }
 
   void answerQuestion(int score) {
@@ -93,8 +91,12 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.white70,
           centerTitle: true,
-          title: Text("Judging Your Sorry Ass"),
+          title: Text(
+            "Judging Your Sorry Ass",
+            style: TextStyle(color: Colors.black),
+          ),
         ),
         body: questionIndex < questions.length
             ? Quiz(
@@ -103,6 +105,7 @@ class _MyAppState extends State<MyApp> {
                 questions: questions,
               )
             : Result(totalScore, resetQuiz),
+        backgroundColor: Colors.blueGrey[900],
       ),
     );
   }

@@ -10,9 +10,9 @@ class Answer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 200.0,
-      child: OutlineButton(
-        color: Colors.black,
-        textColor: Colors.blue,
+      child: MaterialButton(
+        color: Colors.blue,
+        textColor: Colors.black,
         child: Text(answerText),
         onPressed: storepointerfromanswerQuestion,
       ),

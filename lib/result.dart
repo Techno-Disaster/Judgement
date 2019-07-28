@@ -10,7 +10,7 @@ class Result extends StatelessWidget {
     var resultText;
     if (resultScore <= 40) {
       resultText = "Nikal la**e, pehle fursat me nikal";
-     } else if (resultScore <= 50) {
+    } else if (resultScore <= 50) {
       resultText = "Try harder bich";
     } else if (resultScore <= 60) {
       resultText = "You are just.... OK";
@@ -30,15 +30,17 @@ class Result extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Card(
-            color: Colors.blue,
+            margin: EdgeInsets.only(top: 250),
+            color: Colors.white70,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(15.0),
-                topRight: Radius.circular(15.0),
-                bottomLeft: Radius.circular(15.0),
-                bottomRight: Radius.circular(15.0),
+                topLeft: Radius.circular(10.0),
+                topRight: Radius.circular(10.0),
+                bottomLeft: Radius.circular(10.0),
+                bottomRight: Radius.circular(10.0),
               ),
             ),
             child: Container(
@@ -56,10 +58,11 @@ class Result extends StatelessWidget {
               ),
             ),
           ),
-          RaisedButton(
+          MaterialButton(
             child: Text("Retry my Judgement"),
-            color: Colors.white,
-            textColor: Colors.blue[900],
+            colorBrightness: Brightness.light,
+            color: Colors.red,
+            textColor: Colors.white,
             onPressed: resetQuizHandler,
           )
         ],
