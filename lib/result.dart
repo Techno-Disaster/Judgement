@@ -9,7 +9,7 @@ class Result extends StatelessWidget {
   String get resultPhrase {
     var resultText;
     if (resultScore <= 40) {
-      resultText = "Nikal la**e, pehle fursat me nikal";
+      resultText = "Nikal, pehle fursat me nikal";
     } else if (resultScore <= 50) {
       resultText = "Try harder bich";
     } else if (resultScore <= 60) {

@@ -91,11 +91,11 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white70,
+          backgroundColor: Colors.black,
           centerTitle: true,
           title: Text(
             "Judging Your Sorry Ass",
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.white),
           ),
         ),
         body: questionIndex < questions.length
@@ -105,7 +105,7 @@ class _MyAppState extends State<MyApp> {
                 questions: questions,
               )
             : Result(totalScore, resetQuiz),
-        backgroundColor: Colors.blueGrey[900],
+        backgroundColor: Colors.black,
       ),
     );
   }
